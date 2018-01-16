@@ -5,4 +5,6 @@ connection = mysql.createConnection({
 	user: 'root',
 	password: '',
 	database: 'riego'
-})
+});
+
+ module.exports=connection;
