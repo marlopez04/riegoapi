@@ -14,9 +14,14 @@ module.exports = function (app) {
 	app.post('/riegohistorial', (req, res) => {
 		const riegohistorialData = {
 			id: null,
-			riegohistorialname: req.body.riegohistorialname,
-			password: req.body.password,
-			email:    req.body.email,
+			estado: req.body.estado,
+			estadov: req.body.estadov,
+			stat: req.body.stat,
+			ciclos: req.body.ciclos,
+			programa_id: req.body.programa_id,
+			valvula_id: req.body.valvula_id,
+			bomba_id: req.body.bomba_id,
+			zonariego_id: req.body.zonariego_id,
 			created_at: null,
 			updated_at: null
 		};
@@ -25,7 +30,7 @@ module.exports = function (app) {
 			if (data && data.insertId) {
 				res.json({
 					success: true,
-					msg: 'Usuario Insertado',
+					msg: 'Riego creado con exito',
 					data: data
 				})
 			} else {
